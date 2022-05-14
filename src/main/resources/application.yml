@@ -1,0 +1,20 @@
+server:
+    port: 8090
+debug: true
+spring:
+    jackson:
+        time-zone: GMT+8
+    devtools:
+        restart:
+            enabled: true  #设置开启热部署
+    freemarker:
+        cache: false    #页面不加载缓存，修改即时生效
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        username: root
+        password: 123456
+        url: jdbc:mysql://localhost:3306/demo?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true
+mybatis-plus:
+    mapper-locations: classpath:/Mapper/*.xml
+    configuration:
+        log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
